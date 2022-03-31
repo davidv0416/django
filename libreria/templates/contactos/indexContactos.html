@@ -1,0 +1,40 @@
+{% extends 'mainlayout.html' %}
+
+{% block titulo %} Contactos {% endblock %}
+
+{% block contenido %}
+<br>
+<div>
+    <a class="btn btn-success">Creaar nuevo contacto</a>
+</div>
+<table  class="table table-hover">
+    <br>
+    <tr align="center" class="strong" >
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>DIRECCION</td>
+        <td>TELEFONO</td>
+        <td>CORREO</td>
+        <td>OPCIONES</td>
+    </tr>
+    <tr align="center">
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>DIRECCION</td>
+        <td>TELEFONO</td>
+        <td>CORREO</td>
+        <td align="center">
+            <div>
+                <a class="btn btn-primary">Editar Contacto</a>
+                <a class="btn btn-danger">Eliminar Contacto</a>
+            </div>
+         </td>
+    </tr>
+
+</table>
+
+<br><br>
+
+
+
+{% endblock %}
