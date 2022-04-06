@@ -24,6 +24,9 @@ def informacion2(request):
 def crearContacto(request):
      return render(request,'contactos/crearContacto.html')
 
+def editarContacto(request):
+     return render(request,'contactos/editarContacto.html')
+
 def contactos(request):
      return render(request,'contactos/indexContactos.html')
 

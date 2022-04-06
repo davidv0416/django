@@ -11,5 +11,6 @@ urlpatterns = [
     path('info2',views.informacion2),
     path('enviar',views.enviar,name="enviar"),
     path('crearContacto',views.crearContacto,name="crearContacto"),
+    path('editarContacto',views.editarContacto,name="editarContacto"),
     path('contactos',views.contactos,name="contactos"),
 ]
