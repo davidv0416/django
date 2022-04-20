@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from ast import Return
+from .models import contacto
 
 
 
@@ -28,7 +29,8 @@ def editarContacto(request):
      return render(request,'contactos/editarContacto.html')
 
 def contactos(request):
-     return render(request,'contactos/indexContactos.html')
+     contactos=contacto.objects.all()
+     return render(request,'contactos/indexContactos.html',{'contactos': contactos})
 
 def enviar(request):
     if(request.POST):

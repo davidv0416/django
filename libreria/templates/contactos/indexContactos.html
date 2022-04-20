@@ -9,22 +9,24 @@
 </div>
 <table  class="table table-hover">
     <br>
-    <tr align="center" class="strong" >
-        <td>ID</td>
-        <td>NOMBRE</td>
-        <td>DIRECCION</td>
-        <td>TELEFONO</td>
-        <td>CORREO</td>
-        <td>FOTO</td>
-        <td>OPCIONES</td>
-    </tr>
     <tr align="center">
         <td>ID</td>
         <td>NOMBRE</td>
         <td>DIRECCION</td>
         <td>TELEFONO</td>
         <td>CORREO</td>
-        <td>imagenes/foto1.png</td>
+        <td>IMAGEN</td>
+        <td>OPCIONES</td>
+    </tr>
+
+    {% for contacto in contactos %}
+    <tr align="center" class="strong" >
+        <td>{{contacto.id}}</td>
+        <td>{{contacto.nombre}}</td>
+        <td>{{contacto.direccion}}</td>
+        <td>{{contacto.telefono}}</td>
+        <td>{{contacto.correo}}</td>
+        <td>{{contacto.imagen}}</td>
         <td align="center">
             <div>
                 <a class="btn btn-primary" href="{% url 'editarContacto' %}">Editar Contacto</a>
@@ -32,6 +34,7 @@
             </div>
          </td>
     </tr>
+    {% endfor %}
 
 </table>
 
